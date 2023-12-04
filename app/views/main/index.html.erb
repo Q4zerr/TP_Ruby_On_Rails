@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag 'main' %>
+    <title>Document</title>
+</head>
+<body>
+    <section class="main">
+        <h1 class="mainTitle">Projet par : AVET Tanguy</h1>
+        <div class="buttons">
+            <%= link_to "Les Voyages", trips_path, class: "trip_link" %>
+            <%= link_to "Les Utilisateurs", users_path, class: "user_link" %>
+        </div>
+        <div class="wave bottom">
+            <%= image_tag "wave.svg" %>
+        </div>
+    </section>
+</body>
+</html>

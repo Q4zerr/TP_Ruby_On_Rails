@@ -1,0 +1,60 @@
+.show-container{
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.show-container .item{
+    padding: 0.5rem 1.25rem;
+    background-color: var(--violet);
+    border-radius: 0.25rem;
+}
+.show-container .buttons-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.show-container .buttons-container .action-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+.show-container .buttons-container .delete-button{
+    width: 100%;
+}
+.show-container .buttons-container .delete-button button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+.show-container .buttons-container .action-buttons a,
+.show-container .buttons-container .delete-button button{
+    padding: 0.5rem 1.25rem;
+    background-color: var(--violet);
+    color: var(--black);
+    font-size: var(--fs-s);
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: background-color .2s ease-in-out;
+}
+.show-container .buttons-container .action-buttons a:hover,
+.show-container .buttons-container .delete-button button:hover{
+    background-color: var(--blue);
+}
+@media screen and (max-width: 650px){
+    .show-container .buttons-container .action-buttons a, 
+    .show-container .buttons-container .delete-button button{
+        font-size: var(--fs-xs) !important;
+        padding: 0.25rem 0.75rem !important;
+        text-align: center;
+    }
+}

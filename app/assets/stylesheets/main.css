@@ -1,0 +1,73 @@
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+    min-height: 550px;
+}
+.main .mainTitle{
+    font-size: var(--fs-m);
+    text-align: center;
+    animation: animate-title 2s ease infinite;
+}
+@keyframes animate-title{
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-25px);}
+	60% {transform: translateY(-15px);}
+}
+.main .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.buttons .trip_link,
+.buttons .user_link{
+    padding: 0.5rem 1.5rem;
+    background-color: var(--violet);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 0.25rem;
+    transition: background-color .2s ease-in-out;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-s);
+}
+.buttons .trip_link:hover,
+.buttons .user_link:hover{
+    background-color: var(--blue);
+}
+.main .wave{
+    position: absolute;
+    width: 100vw;
+    z-index: -1;
+}
+.main .wave img{
+    width: 100%;
+}
+.main .wave.bottom{
+    bottom: -6rem;
+}
+@media screen and (max-width: 968px){
+    .main .wave.bottom{
+        bottom: -1rem !important;
+    }
+}
+@media screen and (max-width: 420px){
+    .buttons{
+        flex-direction: column;
+        gap: 1rem !important;
+    }
+    .buttons .trip_link,
+    .buttons .user_link{
+        padding: 0.25rem 0.75rem !important;
+        font-size: var(--fs-xs) !important;
+    }
+    .main .mainTitle{
+        font-size: var(--fs-s) !important;
+    }
+}

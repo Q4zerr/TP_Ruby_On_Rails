@@ -1,0 +1,42 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
+ :root{
+    --light-blue: #84c5fe;
+    --blue: #68b6ff;
+    --violet: #CDB4DB;
+    --light-pink: #FFC8DD;
+    --pink: #FFAFCC;
+    --white: #f1f1f1;
+    --black: #404040;
+    --fs-xl: 2.986rem;
+    --fs-l: 2.074rem;
+    --fs-m: 1.44rem;
+    --fs-s: 1.2rem;
+    --fs-xs: 1rem;
+    --fw--extra-light: 200;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 600;
+    --poppins: 'Poppins', sans-serif;
+}
+*{
+    font-family: var(--poppins);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

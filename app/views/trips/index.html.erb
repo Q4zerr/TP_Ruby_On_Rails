@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag 'index' %>
+<section class="index-container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1 class="index-title">Voyages</h1>
+
+  <div id="trips">
+    <% @trips.each do |trip| %>
+      <div class="item">
+        <%= render trip %>
+        <p class="show-link">
+          <%= link_to "Voir le voyage", trip %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+  <div class="redirect-container">
+    <%= link_to "Nouveau voyage", new_trip_path, class: "new-link" %>
+    <%= link_to "Retourner à l'accueil", root_path, class: "home-link" %>
+  </div>
+</section>

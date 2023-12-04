@@ -1,0 +1,88 @@
+.index-container{
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.index-title{
+    color: var(--blue);
+    font-size: var(--fs-l);
+}
+.index-container .redirect-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.index-container #trips,
+.index-container #users{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 1rem;
+}
+.index-container #trips .item,
+.index-container #users .item{
+    background-color: var(--violet);
+    color: var(--black);
+    padding: 0.75rem 1.25rem;
+    padding-bottom: 1.25rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.index-container #trips .item .show-link a,
+.index-container #users .item .show-link a{
+    padding: 0.5rem 1.25rem;
+    background-color: var(--light-blue);
+    border-radius: 0.25rem;
+    text-align: center;
+    width: 100%;
+    transition: background-color .2s ease-in-out;
+    color: var(--black);
+    text-decoration: none;
+}
+.index-container #trips .item .show-link a:hover,
+.index-container #users .item .show-link a:hover{
+    background-color: var(--blue);
+}
+.index-container .redirect-container .new-link,
+.index-container .redirect-container .home-link{
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    background-color: var(--violet);
+    text-decoration: none;
+    border-radius: 0.25rem;
+    color: var(--black);
+    font-weight: var(--fw-bold);
+    transition: background-color .2s ease-in-out;
+}
+.index-container .redirect-container .new-link:hover,
+.index-container .redirect-container .home-link:hover{
+    background-color: var(--blue);
+}
+@media screen and (max-width: 840px){
+    .index-container #trips, 
+    .index-container #users{
+        grid-template-columns: repeat(2, auto) !important;
+    }
+}
+@media screen and (max-width: 550px){
+    .index-container{
+        padding: 2rem 0;
+    }
+    .index-container #trips, 
+    .index-container #users{
+        grid-template-columns: repeat(1, auto) !important;
+    }
+}
+@media screen and (max-width: 420px){
+    .index-container .redirect-container{
+        flex-direction: column;
+    }
+}

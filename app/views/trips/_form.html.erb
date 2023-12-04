@@ -1,0 +1,43 @@
+<%= stylesheet_link_tag 'form' %>
+<%= form_with(model: trip, class: "form-container") do |form| %>
+  <% if trip.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(trip.errors.count, "erreur") %> à empêcher la création du voyage :</h2>
+
+      <ul>
+        <% trip.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-container">
+    <%= form.label :destination, style: "display: block" %>
+    <%= form.text_field :destination, class: "input-field" %>
+  </div>
+
+  <div class="input-container">
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description, class: "input-field" %>
+  </div>
+
+  <div class="input-container">
+    <%= form.label :date_debut, style: "display: block" %>
+    <%= form.date_field :date_debut, class: "input-field" %>
+  </div>
+
+  <div class="input-container">
+    <%= form.label :date_fin, style: "display: block" %>
+    <%= form.date_field :date_fin, class: "input-field" %>
+  </div>
+
+  <div class="input-container">
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.text_field :user_id, class: "input-field" %>
+  </div>
+
+  <div class="input-container">
+    <%= form.submit class: "input-submit" %>
+  </div>
+<% end %>

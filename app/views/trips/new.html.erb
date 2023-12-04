@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag 'new' %>
+<section class="new-container">
+  <h1 class="new-title">Nouveau voyage</h1>
+
+  <%= render "form", trip: @trip %>
+
+  <br>
+
+  <div class="new-button">
+    <%= link_to "Retournez à la liste de voyage", trips_path %>
+  </div>
+</section>

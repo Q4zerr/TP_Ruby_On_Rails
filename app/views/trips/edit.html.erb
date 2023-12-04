@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag 'edit' %>
+<section class="edit-container">
+  <h1 class="edit-title">Modifier le voyage</h1>
+
+  <%= render "form", trip: @trip %>
+
+  <br>
+
+  <div class="edit-buttons">
+    <%= link_to "Voir le voyage", @trip %>
+    <%= link_to "Retournez à la liste de voyage", trips_path %>
+  </div>
+</section>

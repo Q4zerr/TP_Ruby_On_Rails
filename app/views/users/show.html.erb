@@ -1,0 +1,18 @@
+<%= stylesheet_link_tag 'show' %>
+<section class="show-container">
+  <p style="color: green"><%= notice %></p>
+
+  <div class="item">
+    <%= render @user %>
+  </div>
+
+  <div class="buttons-container">
+    <div class="action-buttons">
+      <%= link_to "Modifier l'utilisateur", edit_user_path(@user) %>
+      <%= link_to "Retournez à la liste des utilisateurs", users_path %>
+    </div>
+    <div class="delete-button">
+      <%= button_to "Supprimer l'utilisateur", @user, method: :delete %>
+    </div>
+  </div>
+</section>
